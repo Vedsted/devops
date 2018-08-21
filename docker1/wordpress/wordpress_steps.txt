@@ -1,0 +1,7 @@
+1. create docker-compose.yml file (see docker-compose.yml from same folder)
+
+2. place docker-compose file and nginx.conf in same folder on VM
+
+3. run "docker-compose up -d ."
+
+4. network is now started and wordpress is available on port 80.
