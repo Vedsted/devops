@@ -1,0 +1,2 @@
+# devops
+sdu devops course
