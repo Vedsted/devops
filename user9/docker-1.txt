@@ -7,3 +7,4 @@ Name:         user9-sdu
 
 
 
+ssh ubuntu@18.195.213.238 -i user9-code_aca.pem
