@@ -210,7 +210,7 @@ The first thing to see in this repo's log, is that a file has been edited, stage
 * ee67078 first commit
 ```
 
-#### questions
+#### tasks
 * *describe what you are seeing in the repository.*
     * the master branch contains a file that has been staged and edited again, which results in the following ```git status``` output:
 
