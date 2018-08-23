@@ -91,5 +91,5 @@ Docker-compose file: [docker-compose.yml](https://github.com/Vedsted/devops/blob
 ```
 
 
-* *What commands will give you the ip addresses of the containers in the described network.*
+* *What commands will give you the ip addresses of the containers in the described network.*   
     * the command ```docker network inspect <network-name>```, will display the information about the network and the assosiated containers.
