@@ -22,6 +22,21 @@ Build your image, calling it `<yourusername>/toilet`.
 
 Push your newly created image up to dockerhub, and provide the link to it.
 
+<br>
+
+### Solution:
+Github page: https://github.com/Vedsted/devops/tree/master/docker1/toilet  
+Docker image: https://hub.docker.com/r/vedsted/toilet/ 
+
+Dockerfile:
+```docker
+    FROM    ubuntu:18.04
+    RUN     apt-get update -y && apt-get upgrade -y && apt-get install toilet -y
+    CMD     toilet -F border --gay
+
+``` 
+<br><br>
+
 ## Wordpress with proxy
 
 We want to run a wordpress site, that sits behind a proxy server. You do not need any experience with proxies, nor Nginx in particular to solve this assignment.
@@ -45,3 +60,36 @@ Describe what kind of commands you would use to delete the containers and create
 Describe where you would define what exact version of mysql docker should use?
 
 What commands will give you the ip addresses of the containers in the described network.
+
+<br>
+
+### Solution:
+
+Docker-compose file: [docker-compose.yml](https://github.com/Vedsted/devops/blob/master/docker1/wordpress/docker-compose.yml)
+
+<br>
+
+* *Describe what kind of commands you would use to delete the containers and create new ones.*
+    * the command below starts the network with all the associated containers:  
+        ```docker-compose up -d```
+
+    * the command below stops the network and the associated containers:  
+        ```docker-compose down```
+
+* *Describe where you would define what exact version of mysql docker should use?*
+    * the version of mysql is defined together with the image in the docker-compose file.  
+        In the example below, the mysql version is set to 5.7:
+
+```yml
+# mysql container
+  db:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=wordpress
+    networks:
+      - if_wordpress
+```
+
+
+* *What commands will give you the ip addresses of the containers in the described network.*
+    * the command ```docker network inspect <network-name>```, will display the information about the network and the assosiated containers.
