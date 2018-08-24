@@ -235,7 +235,7 @@ The first thing to see in this repo's log, is that a file has been edited, stage
 
 
 * *remove the staged change*
-    * the command below, moves the changes from the staging area back to the workspace area:  '
+    * the command below, moves the changes from the staging area back to the workspace area:  
     ```git reset afile.txt```    
     There after will the next command discard all changes in the workspace:  
     ```git checkout afile.txt```
